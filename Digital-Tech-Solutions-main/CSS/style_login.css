@@ -1,0 +1,79 @@
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+  }
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: white;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .image-section {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-section img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  
+  .form-section {
+    flex: 1;
+    min-width: 300px;
+    padding-left: 40px;
+  }
+  
+  .form-section h2 {
+    color: #f6b100;
+  }
+  
+  .form-section form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-section form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-section form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-section form a {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+  
+  .form-section form button {
+    background: #f6b100;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .form-section p {
+    font-size: 14px;
+    margin-top: 10px;
+  }

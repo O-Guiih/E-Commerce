@@ -1,0 +1,48 @@
+.footer {
+    background: #fff;
+    padding: 30px 20px;
+    margin-top: 0px;
+    border-top: 1px solid #ccc;
+    bottom: 0;
+}
+  
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+  
+.footer-columns section {
+    margin: 10px;
+    min-width: 150px;
+}
+  
+.footer .newsletter {
+    margin-top: 30px;
+    text-align: center;
+}
+  
+.newsletter input {
+    padding: 10px;
+    width: 250px;
+    margin: 10px;
+}
+  
+.newsletter button {
+    padding: 10px 15px;
+    background: #edb928;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.social span {
+    margin-right: 10px;
+    font-size: 20px;
+}
+  
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 30px;
+    color: #777;
+}
