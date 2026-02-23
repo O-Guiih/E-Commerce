@@ -1,0 +1,51 @@
+// Exemplo de uma tela de carrinho simples em JavaScript (com HTML embutido)
+
+// Estrutura de exemplo do carrinho
+let cart = [
+  { id: 1, nome: 'Produto A', preco: 100, quantidade: 2 },
+  { id: 2, nome: 'Produto B', preco: 50, quantidade: 1 }
+];
+
+// Função para renderizar o carrinho na tela
+function renderCart() {
+  const cartContainer = document.getElementById('cart');
+  cartContainer.innerHTML = '';
+
+  cart.forEach(item => {
+    const itemDiv = document.createElement('div');
+    itemDiv.classList.add('cart-item');
+
+    itemDiv.innerHTML = `
+      <span>${item.nome}</span>
+      <span>Preço: R$ ${item.preco}</span>
+      <span>Qtd: ${item.quantidade}</span>
+      <button onclick="removeFromCart(${item.id})">Remover</button>
+    `;
+
+    cartContainer.appendChild(itemDiv);
+  });
+
+  updateTotal();
+}
+
+// Função para remover item do carrinho
+function removeFromCart(id) {
+  cart = cart.filter(item => item.id !== id);
+  renderCart();
+}
+
+// Função para calcular o total
+function updateTotal() {
+  const total = cart.reduce((sum, item) => sum + item.preco * item.quantidade, 0);
+  document.getElementById('total').innerText = `Total: R$ ${total}`;
+}
+
+// Render inicial
+document.addEventListener('DOMContentLoaded', () => {
+  renderCart();
+});
+
+/* HTML Exemplo:
+<div id="cart"></div>
+<div id="total"></div>
+*/

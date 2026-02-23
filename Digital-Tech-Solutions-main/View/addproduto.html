@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Produto</title>
+  <link rel="stylesheet" href="../css/style_cabecalho.css"> <!-- Link para o arquivo CSS -->
+  <link rel="stylesheet" href="../css/style_rodape.css"> <!-- Link para o arquivo CSS -->
+  <link rel="stylesheet" href="../CSS/style_add.css">
+  <link rel="stylesheet" href=""> <!-- Link para o arquivo CSS -->
+  <script src="../JS/addproduto.js" defer></script>
+  <script src="../JS/showhide_menu.js" defer></script>
+</head>
+<body>
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+        <nav class="cabecalho_menu">
+            <button class="menu_button"></button>
+            <section class="lista_menu">
+                <a href="">Laptops</a>
+                <a href="">PC & Computers</a>
+                <a href="">Cell Phones</a>
+                <a href="">Tablets</a>
+                <a href="">Gaming & VR</a>
+                <a href="">Networking</a>
+                <a href="">Cameras</a>
+                <a href="">Sounds</a>
+                <a href="">Office</a>
+                <a href="">Storage, USB</a>
+                <a href="">Accessories</a>
+                <a href="">Clearance</a>
+            </section>
+        </nav>
+        <img class="cabecalho_logo" src="../IMG/logo.png"/>
+        <nav class="cabecalho_buscar">
+            <section class="campo_buscar">
+                <nav class="nav_busca">
+                    <select class="lista_categoria" name="lista_categoria" >
+                        <option value="" disabled selected>Escolha uma categoria</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="pc_gaming">PC Gaming</option>
+                        <option value="headphones">Headphones</option>
+                        <option value="monitors">Monitors</option>
+                    </select>
+                    <input class="input_busca" type="text" name="input_busca" placeholder="Pesquise por um produto..."/>
+                    <img class="lupa_icon" src="../IMG/icone_lupa.png"/>
+                </nav>
+            </section>    
+        </nav>
+        <nav class="cabecalho_navicones">
+            <img class="suporte_icon" src="../IMG/icone_suporte.png"/>
+            <img class="carrinho_icon" src="../IMG/icone_carrinho.png"/>
+            <button class="cadastro_button">Cadastre-se</button>
+            <button class="login_button">Login</button>
+        </nav>
+    </header>
+    <nav class="cabecalho_carrinho">
+        <section class="lista_carrinho_area">
+            <section class="lista_carrinho">
+                <section class="carrinho_vazio">
+                    <img class="img_carrinhovazio" src="../IMG/carrinhovazio_icon.png"/>
+                    <article class="carrinhovazio_txt">
+                        <p>CARRINHO VAZIO</p>
+                    </article>
+                </section>
+            </section>
+        </section>
+    </nav>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<main>
+  <section class="form-container">
+    <aside class="image-section">
+      <img src="https://via.placeholder.com/100" alt="Pré-visualização da imagem" />
+      <button id="uploadBtn" type="button">Inserir imagem</button>
+    </aside>
+
+    <form class="product-form">
+      <label>
+        Nome do Produto*<br />
+        <input type="text" required />
+      </label>
+
+      <label>
+        Fabricante/Marca<br />
+        <input type="text" />
+      </label>
+
+      <label>
+        Valor*<br />
+        <input type="number" step="0.01" required />
+      </label>
+
+      <section class="quantity-stock">
+        <section class="quantity">
+          <button type="button" onclick="alterarQuantidade(-1)">-</button>
+          <span id="quantidade">1</span>
+          <button type="button" onclick="alterarQuantidade(1)">+</button>
+        </section>
+
+        <section class="stock">
+          <label><input type="radio" name="estoque" value="sim" checked /> Estoque</label>
+          <label><input type="radio" name="estoque" value="nao" /> S/ Estoque</label>
+        </section>
+      </section>
+
+      <label>
+        Descrição do produto.*<br />
+        <textarea required></textarea>
+      </label>
+
+      <section class="buttons">
+        <button type="submit" class="anunciar">Anunciar</button>
+        <button type="button" class="cancelar">Cancelar</button>
+      </section>
+    </form>
+  </section>
+</main>
+
+<!-- RODAPÉ -->
+<footer class="footer">
+  <section class="footer-columns">
+    <section>
+      <h4>DIGITAL TECH SOLUTION – ECOMMERCE</h4>
+      <p>(XX) XXX XXXXXXXX</p>
+      <p>contato@digitaltech.com</p>
+      <section class="social">
+        <span>📘</span>
+        <span>🐦</span>
+        <span>📸</span>
+      </section>
+    </section>
+    <section>
+      <h4>CATEGORIAS</h4>
+      <p>Laptops</p>
+      <p>Celulares</p>
+      <p>Tablets</p>
+    </section>
+    <section>
+      <h4>NOSSA EMPRESA</h4>
+      <p>Sobre</p>
+      <p>Contato</p>
+      <p>Carreiras</p>
+    </section>
+    <section>
+      <h4>SUPORTE</h4>
+      <p>Política</p>
+      <p>FAQs</p>
+    </section>
+  </section>
+
+  <section class="newsletter">
+    <p>Inscreva-se e ganhe 10% de desconto na sua primeira compra</p>
+    <input type="email" placeholder="Seu email" />
+    <button>Cadastrar-se</button>
+  </section>
+
+  <section class="copyright">
+    <p>&copy; 2025 Digital Tech Solution. Todos os direitos reservados.</p>
+  </section>
+
+
+</footer>
+</body>
+</html>

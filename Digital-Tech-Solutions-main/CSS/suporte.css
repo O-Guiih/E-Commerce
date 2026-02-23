@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e9ecf2;
+  padding: 2rem;
+}
+
+.bloco-principal {
+  display: flex;
+  flex-direction: column; /* Empilha tudo por padrão */
+  background-color: white;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.linha-superior {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Lado a lado em telas maiores */
+@media (min-width: 992px) {
+  .linha-superior {
+    flex-direction: row;
+  }
+
+  .formulario-container,
+  .info-contato {
+    flex: 1;
+  }
+}
+
+
+/* Agrupa formulário e info lado a lado em telas grandes */
+@media (min-width: 992px) {
+  .bloco-principal {
+    flex-direction: column;
+  }
+
+  .topo-contato {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .formulario-container,
+  .info-contato {
+    width: 100%;
+  }
+
+  .formulario-container,
+  .info-contato {
+    flex: 1;
+  }
+}
+
+.formulario-container,
+.info-contato,
+.mapa {
+  width: 100%;
+  max-width: 100%;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.formulario-section h1 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.formulario-section p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.linha {
+  display: flex;
+  gap: 1rem;
+}
+
+input, select, textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.checkbox {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.checkbox a {
+  color: #ff9f00;
+  text-decoration: none;
+}
+
+button {
+  background-color: #ffb100;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.info-contato {
+  background-color: #f3f6fd;
+  border-radius: 10px;
+}
+
+.info-contato h4 {
+  margin-top: 1rem;
+  color: #444;
+}
+
+.info-contato p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.info-contato a {
+  color: #ff9f00;
+  text-decoration: none;
+}
+
+.icones img {
+  width: 25px;
+  margin-right: 10px;
+  margin-top: 1rem;
+}
+
+.foto {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+.mapa {
+  background-color: white;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.mapa h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}

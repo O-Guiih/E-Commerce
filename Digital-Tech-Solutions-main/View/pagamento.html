@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="../css/style_checkout.css" />
+  <link rel="stylesheet" href="../css/style_cabecalho.css">
+  <link rel="stylesheet" href="../css/style_rodape.css">
+  <script src="../JS/showhide_menu.js" defer></script>
+</head>
+<body>
+
+   <header class="cabecalho">
+        <nav class="cabecalho_menu">
+            <button class="menu_button"></button>
+            <section class="lista_menu">
+                <a href="">Laptops</a>
+                <a href="">PC & Computers</a>
+                <a href="">Cell Phones</a>
+                <a href="">Tablets</a>
+                <a href="">Gaming & VR</a>
+                <a href="">Networking</a>
+                <a href="">Cameras</a>
+                <a href="">Sounds</a>
+                <a href="">Office</a>
+                <a href="">Storage, USB</a>
+                <a href="">Accessories</a>
+                <a href="">Clearance</a>
+            </section>
+        </nav>
+        <img class="cabecalho_logo" src="../IMG/logo.png"/>
+        <nav class="cabecalho_buscar">
+            <section class="campo_buscar">
+                <nav class="nav_busca">
+                    <select class="lista_categoria" name="lista_categoria" >
+                        <option value="" disabled selected>Escolha uma categoria</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="pc_gaming">PC Gaming</option>
+                        <option value="headphones">Headphones</option>
+                        <option value="monitors">Monitors</option>
+                    </select>
+                    <input class="input_busca" type="text" name="input_busca" placeholder="Pesquise por um produto..."/>
+                    <img class="lupa_icon" src="../IMG/icone_lupa.png"/>
+                </nav>
+            </section>    
+        </nav>
+        <nav class="cabecalho_navicones">
+            <img class="suporte_icon" src="../IMG/icone_suporte.png"/>
+            <img class="carrinho_icon" src="../IMG/icone_carrinho.png"/>
+            <button class="cadastro_button">Cadastre-se</button>
+            <button class="login_button">Login</button>
+        </nav>
+    </header>
+    <nav class="cabecalho_carrinho">
+        <section class="lista_carrinho_area">
+            <section class="lista_carrinho">
+                <section class="carrinho_vazio">
+                    <img class="img_carrinhovazio" src="../IMG/carrinhovazio_icon.png"/>
+                    <article class="carrinhovazio_txt">
+                        <p>CARRINHO VAZIO</p>
+                    </article>
+                </section>
+            </section>
+        </section>
+    </nav>
+
+<!-- Caminho de navegação (breadcrumb) -->
+<h2>INÍCIO / PÁGINAS / <strong>CARRINHO</strong></h2>
+
+<section class="container">
+  <!-- Caminho de navegação -->
+  <nav class="breadcrumb">
+    <a href="index.html">Home</a> / <a href="produtos.html">pages</a> / <span>checkout</span>
+  </nav>
+
+  <!-- Seção principal -->
+  <div class="checkout-box">
+    <!-- Notificações de login e cupom -->
+    <div class="notification-bar">
+      <div class="note">Cliente Recorrente? <a href="login.html">Clique aqui para fazer login</a></div>
+      <div class="note">Você tem um cupom? <a href="#">Clique aqui para colocar</a></div>
+    </div>
+
+    <!-- Formulário de pagamento -->
+    <div class="content">
+      <form class="form-section">
+        <h2>DETALHES DE COBRANÇA</h2>
+
+        <div class="double">
+          <div class="form-group">
+            <label>Primeiro Nome *</label>
+            <input type="text" required>
+          </div>
+          <div class="form-group">
+            <label>Último Nome *</label>
+            <input type="text" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Nome da Empresa (Opcional)</label>
+          <input type="text">
+        </div>
+
+        <div class="form-group">
+          <label>País / Região *</label>
+          <select required>
+            <option>Brasil (BR)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Endereço</label>
+          <input type="text" placeholder="House number and street name ..." required>
+          <input type="text" placeholder="Apartment, suite, unit, etc (Opcional)">
+        </div>
+
+        <div class="form-group">
+          <label>Cidade</label>
+          <input type="text" required>
+        </div>
+
+        <div class="form-group">
+          <label>Estado</label>
+          <select required>
+            <option>Washington</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>CEP</label>
+          <input type="text" required>
+        </div>
+
+        <div class="form-group">
+          <label>Número de Telefone *</label>
+          <input type="tel" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email *</label>
+          <input type="email" required>
+        </div>
+
+        <div class="form-group checkbox">
+          <input type="checkbox" id="criarConta">
+          <label for="criarConta">Criar conta?</label>
+        </div>
+
+        <div class="form-group">
+          <h3>Informações adicionais</h3>
+          <label>Observações (Opcional)</label>
+          <textarea placeholder="Digite..."></textarea>
+        </div>
+      </form>
+
+      <!-- Resumo do pedido -->
+      <div class="order-summary">
+        <h3>Seu pedido</h3>
+        <div class="summary-box">
+          <div class="summary-header">
+            <span>PRODUCT</span>
+            <span>SUB TOTAL</span>
+          </div>
+          <div class="product-info">
+            <img src="https://via.placeholder.com/50" alt="Produto">
+            <div class="info">
+              <p>Prensapple Macbook Pro 2022<br><small>M1 512GB × 1</small></p>
+            </div>
+            <span class="price">$90.50</span>
+          </div>
+          <div class="shipping">Worldwide Standard Shipping Free</div>
+          <div class="total">
+            <strong>Order Total</strong>
+            <strong class="order-value">$1,746.50</strong>
+          </div>
+
+          <div class="payment-method">
+            <label><input type="radio" name="payment" checked> Direct Bank Transfer</label>
+            <p class="note">Make your payment directly into our bank account...</p>
+            <label><input type="radio" name="payment"> Cash on Delivery</label>
+            <label><input type="radio" name="payment"> Paypal <a href="#">What's Paypal?</a></label>
+          </div>
+
+          <button class="place-order">PLACE ORDER</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+    <section class="footer-columns">
+        <section>
+            <h4>DIGITAL TECH SOLUTION – ECOMMERCE</h4>
+            <p>(XX) XXX XXXXXXXX</p>
+            <p>contato@digitaltech.com</p>
+            <section class="social">
+                <span>📘</span>
+                <span>🐦</span>
+                <span>📸</span>
+            </section>
+        </section>
+        <section>
+            <h4>CATEGORIAS</h4>
+            <p>Laptops</p>
+            <p>Celulares</p>
+            <p>Tablets</p>
+        </section>
+        <section>
+            <h4>NOSSA EMPRESA</h4>
+            <p>Sobre</p>
+            <p>Contato</p>
+            <p>Carreiras</p>
+        </section>
+        <section>
+            <h4>SUPORTE</h4>
+            <p>Política</p>
+            <p>FAQs</p>
+        </section>
+    </section>
+    <section class="newsletter">
+        <p>Inscreva-se e ganhe 10% de desconto na sua primeira compra</p>
+        <input type="email" placeholder="Seu email" />
+        <button>Cadastrar-se</button>
+    </section>
+    <section class="copyright">
+        <p>&copy; 2025 Digital Tech Solution. Todos os direitos reservados.</p>
+    </section>
+</footer>
+
+</body>
+</html>
+
+<!-- 
